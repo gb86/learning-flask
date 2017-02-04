@@ -10,6 +10,10 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
 @app.route("/api/searchfilms/<name>")
 def search_films(name):
     results = get_films_starting_with(name)
